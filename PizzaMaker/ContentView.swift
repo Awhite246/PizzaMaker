@@ -7,15 +7,28 @@
 
 import SwiftUI
 
+/*  Images from:
+ * <a href="https://www.flaticon.com/free-icons/home" title="home icons">Home icons created by Dave Gandy - Flaticon</a>
+ *
+ *
+ */
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView{
+            Home()
+                .tabItem {
+                    Label("Home", systemImage: "square.grid.2x2")
+                }
+            Menu()
+                .tabItem {
+                    Label("Menu", systemImage: "list.bullet")
+                }
+            Order()
+                .tabItem {
+                    Label("Order", systemImage: "cart")
+                }
         }
-        .padding()
+        .preferredColorScheme(.dark)
     }
 }
 
