@@ -13,7 +13,7 @@ struct Home: View {
     @State var scrollOffset = CGFloat.zero
     var body: some View {
         VStack {
-            ObservableScrollView(scrollOffset: $scrollOffset) { proxy in
+            ScrollView(.vertical, showsIndicators: false) {
                 Text("Daily Deals")
                     .offset(x: -75, y : 30)
                     .font(.system(size: 50))
@@ -24,8 +24,9 @@ struct Home: View {
                                 VStack {
                                     Image(pizza)
                                         .resizable()
-                                        .frame(width: (scrollOffset > 250) ? 100 : (350 - (scrollOffset)), height: (scrollOffset > 250) ? 100 : (350 - (scrollOffset)))
+                                        .frame(width: 300, height: 300)
                                         .clipShape(RoundedRectangle(cornerRadius: 20))
+                                        .padding(.trailing, 10)
                                     ZStack {
                                         Color(uiColor: .darkGray)
                                             .frame(width:100, height: 40)
@@ -47,6 +48,7 @@ struct Home: View {
                         }
                     }
                 }
+                .padding(.bottom, -50)
                 Text("Trending")
                     .offset(x: -100, y: 30)
                     .font(.system(size: 50))
@@ -56,8 +58,9 @@ struct Home: View {
                             VStack {
                                 Image(pizza)
                                     .resizable()
-                                    .frame(width: (scrollOffset > 250) ? 350 : ((scrollOffset ) + 100), height: (scrollOffset > 250) ? 350 : ((scrollOffset) + 100))
+                                    .frame(width: 300, height: 300)
                                     .clipShape(RoundedRectangle(cornerRadius: 20))
+                                    .padding(.trailing, 10)
                                 ZStack {
                                     Color(uiColor: .darkGray)
                                         .frame(width:100, height: 40)
@@ -70,14 +73,21 @@ struct Home: View {
                                 }
                                 .offset(y: -25)
                                 Image(systemName: "star.fill")
-                                    .offset(x:55, y: -195)
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .offset(x:120, y: -350)
                                     .foregroundColor(.yellow)
+                                Image(systemName: "bookmark.fill")
+                                    .resizable()
+                                    .frame(width: 25, height: 45)
+                                    .offset(x:-120, y: -400)
+                                    .foregroundColor(.blue)
                             }
                         }
                     }
                 }
                 Color.clear
-                    .frame(height: 200)
+                    .frame(height: 20)
             }
         }
     }

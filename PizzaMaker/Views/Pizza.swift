@@ -15,9 +15,8 @@ struct Pizza : Codable {
     var mPrice : Double
     var lPrice : Double
     var size : String = "S"
-    var ingredients : [Ingredient] = []
+    var ingredients : [Ingredient]
     var count : Int = 0
-    
     mutating func increment() {
         count += 1
     }
@@ -36,6 +35,7 @@ struct Pizza : Codable {
 }
 
 struct Ingredient : Codable {
+    var id: UUID
     var name: String
     var count: Int
     mutating func increment() {
