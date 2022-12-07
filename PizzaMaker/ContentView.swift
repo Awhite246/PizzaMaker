@@ -23,6 +23,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Menu", systemImage: "list.bullet")
                 }
+            Favorite()
+                .tabItem {
+                    Label("Favorites", systemImage: "bookmark")
+                }
             Order()
                 .tabItem {
                     Label("Order", systemImage: "cart")

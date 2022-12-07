@@ -16,6 +16,8 @@
 		E3769280293E585B0033F11B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E376927F293E585B0033F11B /* Assets.xcassets */; };
 		E3769285293F9F930033F11B /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = E3769284293F9F930033F11B /* menu.json */; };
 		E37692882940F19F0033F11B /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37692872940F19F0033F11B /* Decoder.swift */; };
+		E376928A29411C150033F11B /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376928929411C150033F11B /* Favorite.swift */; };
+		E376928C29411F630033F11B /* ScrollViewOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376928B29411F630033F11B /* ScrollViewOffset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		E376927F293E585B0033F11B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3769284293F9F930033F11B /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
 		E37692872940F19F0033F11B /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		E376928929411C150033F11B /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		E376928B29411F630033F11B /* ScrollViewOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 				E3769277293E4BF10033F11B /* Menu.swift */,
 				E3769279293E4C480033F11B /* Order.swift */,
 				E3769275293E49140033F11B /* Pizza.swift */,
+				E376928929411C150033F11B /* Favorite.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				E37692872940F19F0033F11B /* Decoder.swift */,
+				E376928B29411F630033F11B /* ScrollViewOffset.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -169,6 +175,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E376927A293E4C480033F11B /* Order.swift in Sources */,
+				E376928C29411F630033F11B /* ScrollViewOffset.swift in Sources */,
+				E376928A29411C150033F11B /* Favorite.swift in Sources */,
 				E3769276293E49140033F11B /* Pizza.swift in Sources */,
 				E3769264293A55C30033F11B /* ContentView.swift in Sources */,
 				E3769274293A563C0033F11B /* Home.swift in Sources */,
