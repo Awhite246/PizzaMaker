@@ -14,7 +14,7 @@ import SwiftUI
  */
 struct ContentView: View {
     var body: some View {
-        TabView{
+        TabView {
             Home()
                 .tabItem {
                     Label("Home", systemImage: "square.grid.2x2")

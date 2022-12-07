@@ -7,27 +7,31 @@
 
 import SwiftUI
 
-class Pizza : ObservableObject {
-    private var name : String = ""
-    private var description : String = ""
-    private var price : Double = 0.0
-    private var size : String = ""
-    private var ingredients : [Ingredient] = []
-    private var count : Int = 0
-    func increment() {
+struct Pizza : Codable {
+    var id : UUID
+    var name : String
+    var description : String
+    var sPrice : Double
+    var mPrice : Double
+    var lPrice : Double
+    var size : String = "S"
+    var ingredients : [Ingredient] = []
+    var count : Int = 0
+    
+    mutating func increment() {
         count += 1
     }
-    func decrement() {
+    
+    mutating func decrement() {
         count -= 1
     }
-    func setCount(_ num : Int) {
+    
+    mutating func setCount(_ num : Int) {
         count = num
     }
-    func setSize(_ size : String) {
+    
+    mutating func setSize(_ size : String) {
         self.size = size
-    }
-    func addIngredient (_ ingredient : Ingredient) {
-        
     }
 }
 
@@ -41,8 +45,5 @@ struct Ingredient : Codable {
         if count != 0 {
             count -= 1
         }
-    }
-    func getName() -> String {
-        return name
     }
 }

@@ -8,30 +8,39 @@
 import SwiftUI
 
 struct Home: View {
+    let dailyDeals = ["Pepperoni", "Sausage"]
+    let trending = ["Pepperoni", "Sausage"]
     var body: some View {
         VStack {
-            Text("Todays Deals")
+            Text("Daily Deals")
                 .offset(x: -130)
                 .font(.title2).bold()
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(0..<5, id: \.self) { i in
-                        Image("pizza")
-                            .resizable()
-                            .frame(width: 100, height: 100)
+                    ForEach(dailyDeals, id: \.self) { pizza in
+                        VStack {
+                            Image(pizza)
+                                .resizable()
+                                .frame(width: 150, height: 150)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                            Text(pizza)
+                        }
                     }
                 }
             }
-            .padding(.bottom, 100)
             Text("Trending")
                 .offset(x: -150)
                 .font(.title2).bold()
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(0..<5, id: \.self) { i in
-                        Image("pizza")
-                            .resizable()
-                            .frame(width: 100, height: 100)
+                    ForEach(trending, id: \.self) { pizza in
+                        VStack {
+                            Image(pizza)
+                                .resizable()
+                                .frame(width: 150, height: 150)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                            Text(pizza)
+                        }
                     }
                 }
             }

@@ -1,0 +1,110 @@
+[
+    {
+        "id": "eeb36144-08bd-40c4-8d7f-647d4fd0e910",
+        "name": "Cheese",
+        "sPrice": 13.00,
+        "mPrice": 17.00,
+        "lPrice": 18.50,
+        "ingredients": ["tomato sauce", "mozzarella", "basil"],
+        "description": "Our exeptional pizza turns simple into sublime, with the delicious combination of crispy pizza crust, flavorful tomato sauce, and bubbly cheese make for an unbeatable combination. You\'ve got perfection on a plate."
+    },
+    {
+        "id": "b7a20a98-3490-4fd9-bc10-35b963efe891",
+        "name": "Pepperoni",
+        "sPrice": 15.00,
+        "mPrice": 19.00,
+        "lPrice": 20.50,
+        "ingredients": ["tomato sauce", "mozzarella", "pepperoni", "basil"],
+        "description": "Our traditional American pepperoni pizza is a cheesy, delishes treat. Piles of tangy tomato sauce and creamy mozzarella on top of real, hand-tossed pizza dough, create an unbeatable tried and true pizza combinaton."
+    },
+    {
+        "id": "3049d229-f273-4d87-803e-ee04f426a2ef",
+        "name": "Sausage",
+        "sPrice": 15.00,
+        "mPrice": 19.00,
+        "lPrice": 20.50,
+        "ingredients": ["tomato sauce", "mozzarella", "sausage", "onion", "fennel", "basil"],
+        "description": "You will love this grilled Italian sausage pizza for its sweet and spicy flavor! It\'s loaded with caramelized onions, fennel, roasted red peppers, lots of fresh mozzarella, and is seasoned with rosemary and red pepper flakes."
+    },
+    {
+        "id": "5eb47ce3-4841-45be-a41d-a2bfe7527276",
+        "name": "Hawaiian",
+        "sPrice": 50.00,
+        "mPrice": 50.00,
+        "lPrice": 50.00,
+        "ingredients": ["trash", "sadness", "tears"],
+        "description": "Garabage pizza, do not buy."
+    },
+    {
+        "id": "65dc18c0-64d4-4035-891a-a83c30594601",
+        "name": "Meat Lover",
+        "sPrice": 19.00,
+        "mPrice": 24.00,
+        "lPrice": 26.00,
+        "ingredients": ["tomato sauce", "mozzarella", "parmesan", "ham", "pepperoni", "sausage", "bacon"],
+        "description": "If you love pizza in all it\'s bready and cheesy glory, but still find yourself hungry for something more substantial, then chances are you\'ll be a fan of meat lover's pizza. Homemade thin crust pizza, topped off with creamy cheese, bacon, ham, pepperoni and hot sausage! A must make for meat lover\’s."
+    },
+    {
+        "id": "bf5f15b1-8133-4f64-9247-526c7038f398",
+        "name": "Pizza Bianca",
+        "sPrice": 17.00,
+        "mPrice": 21.50,
+        "lPrice": 22.00,
+        "ingredients": ["cheese sauce", "mozzarella", "bacon", "arugula", "basil"],
+        "description": "Also known as white pizza, the pizza base is spread with a ricotta parmesan cheese mixture (instead of traditional tomato sauce), topped with salty pancetta cubes, creamy grated mozzarella, and finished with wild rocket arugula!"
+    },
+    {
+        "id": "05d02184-1796-4917-84fd-151d3140aeab",
+        "name": "Garlic Chicken",
+        "sPrice": 18.00,
+        "mPrice": 22.50,
+        "lPrice": 24.00,
+        "ingredients": ["cheese sauce", "parmesan", "chicken", "tomato", "green oinion", "artichoke"],
+        "description": "Everyone will be reaching for another slice after they\'ve had a taste of this impressive pizza made with a handcrafted white sauce. The stellar cast includes butter, garlic and shredded parmesan cheese that\'s joined with strips of tender chicken, artichokes, green onions and tomato."
+    },
+    {
+        "id": "3f77e8de-5db7-45a5-a5dd-5f94ad617ec8",
+        "name": "Veggie",
+        "sPrice": 16.00,
+        "mPrice": 20.00,
+        "lPrice": 22.00,
+        "ingredients": ["tomato sauce", "mozzarella", "artichoke", "bel pepper", "olive", "red oinion", "baby spinach"],
+        "description": "This vegetarian pizza recipe will delight vegetarians and carnivores alike. It’s fresh and full of flavor, featuring cherry tomatoes, artichoke, bell pepper, olives, red onion and some hidden baby spinach. You\’ll find a base of rich tomato sauce and golden, bubbling mozzarella underneath, of course."
+    },
+    {
+        "id": "3f77e8de-5db7-45a5-a5dd-5f94ad617ec8",
+        "name": "Vodka Sauce",
+        "sPrice": 13.00,
+        "mPrice": 17.00,
+        "lPrice": 18.50,
+        "ingredients": ["vodka sauce", "mozzarella", "spinach", "parmesan"],
+        "description": "We love this vodka sauce pizza! Flavorful crust topped with perfect vodka sauce and fresh mozzarella. Sprinkle with basil and parmesan. It\’s absolutely incredible."
+    },
+    {
+        "id": "17df9398-e40e-4e6c-a744-86b44eef153d",
+        "name": "BBQ Chicken",
+        "sPrice": 18.00,
+        "mPrice": 22.50,
+        "lPrice": 24.00,
+        "ingredients": ["bbq sauce", "red oinion", "gouda", "cilantro", "chicken"],
+        "description": "This is a recipe for classic BBQ chicken pizza with tangy BBQ sauce, chicken, and red onion. Gouda cheese gives the homemade pizza the most delicious smoky flavor and cilantro adds a touch of freshness"
+    },
+    {
+        "id": "9438acef-938b-48e8-95ad-94227d257f0a",
+        "name": "Philly Cheese Steak",
+        "sPrice": 19.50,
+        "mPrice": 24.00,
+        "lPrice": 26.00,
+        "ingredients": ["cheese sauce", "steak", "mushroom", "bell pepper", "mozzarella"],
+        "description": "This Philly Cheese Steak Pizza is cheesy, meaty, comfort food at it\’s most addicting.  It starts by layering pizza dough with Alfredo Sauce followed by mozzarella cheese, juicy steak, bell peppers, mushrooms and more cheese then baked to golden bubbly perfection. This Philly Cheese Steak Pizza is fabulous game day food,  party food, company food or just a fun dinner any night of the week.  Prepare to fall in love with your new favorite way to eat Philly Cheese Steak!"
+    },
+    {
+        "id": "1fc14ab3-6033-406e-b94e-784fe7cf3c4a",
+        "name": "Caprese",
+        "sPrice": 17.50,
+        "mPrice": 21.50,
+        "lPrice": 22.50,
+        "ingredients": ["tomato sauce", "mozzarella", "tomatoes", "balsomic glaze", "basil"],
+        "description": "Authentic pizza topped with fresh mozzarella, tomatoes, basil and a balsamic glaze. You can\’t go wrong with a classic Caprese Pizza!"
+    }
+]

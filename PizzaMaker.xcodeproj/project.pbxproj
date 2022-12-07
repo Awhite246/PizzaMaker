@@ -14,6 +14,8 @@
 		E3769278293E4BF10033F11B /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3769277293E4BF10033F11B /* Menu.swift */; };
 		E376927A293E4C480033F11B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3769279293E4C480033F11B /* Order.swift */; };
 		E3769280293E585B0033F11B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E376927F293E585B0033F11B /* Assets.xcassets */; };
+		E3769285293F9F930033F11B /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = E3769284293F9F930033F11B /* menu.json */; };
+		E37692882940F19F0033F11B /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37692872940F19F0033F11B /* Decoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		E3769277293E4BF10033F11B /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		E3769279293E4C480033F11B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		E376927F293E585B0033F11B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3769284293F9F930033F11B /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
+		E37692872940F19F0033F11B /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,11 @@
 		E3769260293A55C30033F11B /* PizzaMaker */ = {
 			isa = PBXGroup;
 			children = (
+				E37692862940F1350033F11B /* Helpers */,
 				E3769272293A56330033F11B /* Views */,
 				E3769263293A55C30033F11B /* ContentView.swift */,
 				E3769261293A55C30033F11B /* PizzaMakerApp.swift */,
+				E3769284293F9F930033F11B /* menu.json */,
 				E376927F293E585B0033F11B /* Assets.xcassets */,
 				E3769267293A55C50033F11B /* Preview Content */,
 			);
@@ -82,6 +88,14 @@
 				E3769275293E49140033F11B /* Pizza.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E37692862940F1350033F11B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E37692872940F19F0033F11B /* Decoder.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3769285293F9F930033F11B /* menu.json in Resources */,
 				E3769280293E585B0033F11B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +172,7 @@
 				E3769276293E49140033F11B /* Pizza.swift in Sources */,
 				E3769264293A55C30033F11B /* ContentView.swift in Sources */,
 				E3769274293A563C0033F11B /* Home.swift in Sources */,
+				E37692882940F19F0033F11B /* Decoder.swift in Sources */,
 				E3769262293A55C30033F11B /* PizzaMakerApp.swift in Sources */,
 				E3769278293E4BF10033F11B /* Menu.swift in Sources */,
 			);
