@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-/*  Images from:
- * <a href="https://www.flaticon.com/free-icons/home" title="home icons">Home icons created by Dave Gandy - Flaticon</a>
- *
- *
- */
 struct ContentView: View {
     var body: some View {
         TabView {

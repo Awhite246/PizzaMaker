@@ -9,7 +9,11 @@ import SwiftUI
 
 struct Favorite: View {
     var body: some View {
-        Text("Favorite")
+        VStack {
+            Text("Favorite")
+        }
+        .preferredColorScheme(.dark)
+        .background(Color("RichBlack"))
     }
 }
 

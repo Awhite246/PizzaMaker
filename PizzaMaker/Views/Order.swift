@@ -9,7 +9,11 @@ import SwiftUI
 
 struct Order: View {
     var body: some View {
-        Text("Order")
+        VStack {
+            Text("Order")
+        }
+        .preferredColorScheme(.dark)
+        .background(Color("RichBlack"))
     }
 }
 

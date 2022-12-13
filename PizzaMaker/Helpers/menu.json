@@ -2,9 +2,9 @@
     {
         "id": "eeb36144-08bd-40c4-8d7f-647d4fd0e910",
         "name": "Cheese",
-        "sPrice": 13.00,
-        "mPrice": 17.00,
-        "lPrice": 18.50,
+        "sPrice": 13,
+        "mPrice": 17,
+        "lPrice": 18.5,
         "ingredients": [
             {
                 "id": "c590e5c8-f0e6-4033-9ff3-3ac113e726ea",
@@ -22,14 +22,17 @@
                 "count": 1
             }
         ],
-        "description": "Our exeptional pizza turns simple into sublime, with the delicious combination of crispy pizza crust, flavorful tomato sauce, and bubbly cheese make for an unbeatable combination. You\'ve got perfection on a plate."
+        "description": "Our exeptional pizza turns simple into sublime, with the delicious combination of crispy pizza crust, flavorful tomato sauce, and bubbly cheese make for an unbeatable combination. You've got perfection on a plate.",
+        "trending": true,
+        "dailyDeal": false,
+        "favorite": true
     },
     {
         "id": "b7a20a98-3490-4fd9-bc10-35b963efe891",
         "name": "Pepperoni",
-        "sPrice": 15.00,
-        "mPrice": 19.00,
-        "lPrice": 20.50,
+        "sPrice": 15,
+        "mPrice": 19,
+        "lPrice": 20.5,
         "ingredients": [
             {
                 "id": "92c962a3-5e84-4a1c-b6e8-8b5525dd0be8",
@@ -52,14 +55,17 @@
                 "count": 1
             }
         ],
-        "description": "Our traditional American pepperoni pizza is a cheesy, delishes treat. Piles of tangy tomato sauce and creamy mozzarella on top of real, hand-tossed pizza dough, create an unbeatable tried and true pizza combinaton."
+        "description": "Our traditional American pepperoni pizza is a cheesy, delishes treat. Piles of tangy tomato sauce and creamy mozzarella on top of real, hand-tossed pizza dough, create an unbeatable tried and true pizza combinaton.",
+        "trending": false,
+        "dailyDeal": true,
+        "favorite": true
     },
     {
         "id": "3049d229-f273-4d87-803e-ee04f426a2ef",
         "name": "Sausage",
-        "sPrice": 15.00,
-        "mPrice": 19.00,
-        "lPrice": 20.50,
+        "sPrice": 15,
+        "mPrice": 19,
+        "lPrice": 20.5,
         "ingredients": [
             {
                 "id": "de6d8872-3ffb-430b-b5d2-e65d61a319c6",
@@ -92,14 +98,17 @@
                 "count": 1
             }
         ],
-        "description": "You will love this grilled Italian sausage pizza for its sweet and spicy flavor! It\'s loaded with caramelized onions, fennel, roasted red peppers, lots of fresh mozzarella, and is seasoned with rosemary and red pepper flakes."
+        "description": "You will love this grilled Italian sausage pizza for its sweet and spicy flavor! It's loaded with caramelized onions, fennel, roasted red peppers, lots of fresh mozzarella, and is seasoned with rosemary and red pepper flakes.",
+        "trending": false,
+        "dailyDeal": false,
+        "favorite": true
     },
     {
         "id": "5eb47ce3-4841-45be-a41d-a2bfe7527276",
         "name": "Hawaiian",
-        "sPrice": 50.00,
-        "mPrice": 50.00,
-        "lPrice": 50.00,
+        "sPrice": 50,
+        "mPrice": 50,
+        "lPrice": 50,
         "ingredients": [
             {
                 "id": "99f393e4-5ea9-4b82-9417-ffebb9483407",
@@ -117,14 +126,17 @@
                 "count": 1
             }
         ],
-        "description": "Garabage pizza, do not buy."
+        "description": "Garabage pizza, do not buy.",
+        "trending": false,
+        "dailyDeal": false,
+        "favorite": false
     },
     {
         "id": "65dc18c0-64d4-4035-891a-a83c30594601",
         "name": "Meat Lover",
-        "sPrice": 19.00,
-        "mPrice": 24.00,
-        "lPrice": 26.00,
+        "sPrice": 19,
+        "mPrice": 24,
+        "lPrice": 26,
         "ingredients": [
             {
                 "id": "af30df3c-ca24-429e-bf83-0bb08bb3ce4f",
@@ -162,14 +174,17 @@
                 "count": 1
             }
         ],
-        "description": "If you love pizza in all it\'s bready and cheesy glory, but still find yourself hungry for something more substantial, then chances are you\'ll be a fan of meat lover's pizza. Homemade thin crust pizza, topped off with creamy cheese, bacon, ham, pepperoni and hot sausage! A must make for meat lover\’s."
+        "description": "If you love pizza in all it's bready and cheesy glory, but still find yourself hungry for something more substantial, then chances are you'll be a fan of meat lover's pizza. Homemade thin crust pizza, topped off with creamy cheese, bacon, ham, pepperoni and hot sausage! A must make for meat lover’s.",
+        "trending": true,
+        "dailyDeal": true,
+        "favorite": false
     },
     {
         "id": "bf5f15b1-8133-4f64-9247-526c7038f398",
         "name": "Pizza Bianca",
-        "sPrice": 17.00,
-        "mPrice": 21.50,
-        "lPrice": 22.00,
+        "sPrice": 17,
+        "mPrice": 21.5,
+        "lPrice": 22,
         "ingredients": [
             {
                 "id": "bc65d60e-8609-4ad5-8f4c-9615b1f84f6d",
@@ -197,14 +212,17 @@
                 "count": 1
             }
         ],
-        "description": "Also known as white pizza, the pizza base is spread with a ricotta parmesan cheese mixture (instead of traditional tomato sauce), topped with salty pancetta cubes, creamy grated mozzarella, and finished with wild rocket arugula!"
+        "description": "Also known as white pizza, the pizza base is spread with a ricotta parmesan cheese mixture (instead of traditional tomato sauce), topped with salty pancetta cubes, creamy grated mozzarella, and finished with wild rocket arugula!",
+        "trending": false,
+        "dailyDeal": false,
+        "favorite": false
     },
     {
         "id": "05d02184-1796-4917-84fd-151d3140aeab",
         "name": "Garlic Chicken",
-        "sPrice": 18.00,
-        "mPrice": 22.50,
-        "lPrice": 24.00,
+        "sPrice": 18,
+        "mPrice": 22.5,
+        "lPrice": 24,
         "ingredients": [
             {
                 "id": "e0d03b1f-cd53-4466-bf8a-aa56dd7ef700",
@@ -237,14 +255,17 @@
                 "count": 1
             }
         ],
-        "description": "Everyone will be reaching for another slice after they\'ve had a taste of this impressive pizza made with a handcrafted white sauce. The stellar cast includes butter, garlic and shredded parmesan cheese that\'s joined with strips of tender chicken, artichokes, green onions and tomato."
+        "description": "Everyone will be reaching for another slice after they've had a taste of this impressive pizza made with a handcrafted white sauce. The stellar cast includes butter, garlic and shredded parmesan cheese that's joined with strips of tender chicken, artichokes, green onions and tomato.",
+        "trending": false,
+        "dailyDeal": false,
+        "favorite": false
     },
     {
-        "id": "3f77e8de-5db7-45a5-a5dd-5f94ad617ec8",
+        "id": "753adf6d-1e2c-4263-bc0e-0f8cc135fcc7",
         "name": "Veggie",
-        "sPrice": 16.00,
-        "mPrice": 20.00,
-        "lPrice": 22.00,
+        "sPrice": 16,
+        "mPrice": 20,
+        "lPrice": 22,
         "ingredients": [
             {
                 "id": "d5345a70-8c70-4c89-ae86-fa5f6a75863d",
@@ -282,14 +303,17 @@
                 "count": 1
             }
         ],
-        "description": "This vegetarian pizza recipe will delight vegetarians and carnivores alike. It’s fresh and full of flavor, featuring cherry tomatoes, artichoke, bell pepper, olives, red onion and some hidden baby spinach. You\’ll find a base of rich tomato sauce and golden, bubbling mozzarella underneath, of course."
+        "description": "This vegetarian pizza recipe will delight vegetarians and carnivores alike. It’s fresh and full of flavor, featuring cherry tomatoes, artichoke, bell pepper, olives, red onion and some hidden baby spinach. You’ll find a base of rich tomato sauce and golden, bubbling mozzarella underneath, of course.",
+        "trending": false,
+        "dailyDeal": true,
+        "favorite": false
     },
     {
         "id": "3f77e8de-5db7-45a5-a5dd-5f94ad617ec8",
         "name": "Vodka Sauce",
-        "sPrice": 13.00,
-        "mPrice": 17.00,
-        "lPrice": 18.50,
+        "sPrice": 13,
+        "mPrice": 17,
+        "lPrice": 18.5,
         "ingredients": [
             {
                 "id": "ea5b5139-001d-4d0b-aee6-cf64573b12aa",
@@ -312,14 +336,17 @@
                 "count": 1
             }
         ],
-        "description": "We love this vodka sauce pizza! Flavorful crust topped with perfect vodka sauce and fresh mozzarella. Sprinkle with basil and parmesan. It\’s absolutely incredible."
+        "description": "We love this vodka sauce pizza! Flavorful crust topped with perfect vodka sauce and fresh mozzarella. Sprinkle with basil and parmesan. It’s absolutely incredible.",
+        "trending": false,
+        "dailyDeal": false,
+        "favorite": false
     },
     {
         "id": "17df9398-e40e-4e6c-a744-86b44eef153d",
         "name": "BBQ Chicken",
-        "sPrice": 18.00,
-        "mPrice": 22.50,
-        "lPrice": 24.00,
+        "sPrice": 18,
+        "mPrice": 22.5,
+        "lPrice": 24,
         "ingredients": [
             {
                 "id": "b6b10735-db6e-452b-8662-e1579ea1d8f5",
@@ -347,14 +374,17 @@
                 "count": 1
             }
         ],
-        "description": "This is a recipe for classic BBQ chicken pizza with tangy BBQ sauce, chicken, and red onion. Gouda cheese gives the homemade pizza the most delicious smoky flavor and cilantro adds a touch of freshness"
+        "description": "This is a recipe for classic BBQ chicken pizza with tangy BBQ sauce, chicken, and red onion. Gouda cheese gives the homemade pizza the most delicious smoky flavor and cilantro adds a touch of freshness",
+        "trending": false,
+        "dailyDeal": false,
+        "favorite": false
     },
     {
         "id": "9438acef-938b-48e8-95ad-94227d257f0a",
         "name": "Philly Cheese Steak",
-        "sPrice": 19.50,
-        "mPrice": 24.00,
-        "lPrice": 26.00,
+        "sPrice": 19.5,
+        "mPrice": 24,
+        "lPrice": 26,
         "ingredients": [
             {
                 "id": "3b959a6f-1ed7-45ff-9889-44c2b7d35889",
@@ -381,16 +411,18 @@
                 "name": "Mozzarella",
                 "count": 1
             }
-            
         ],
-        "description": "This Philly Cheese Steak Pizza is cheesy, meaty, comfort food at it\’s most addicting.  It starts by layering pizza dough with Alfredo Sauce followed by mozzarella cheese, juicy steak, bell peppers, mushrooms and more cheese then baked to golden bubbly perfection. This Philly Cheese Steak Pizza is fabulous game day food,  party food, company food or just a fun dinner any night of the week.  Prepare to fall in love with your new favorite way to eat Philly Cheese Steak!"
+        "description": "This Philly Cheese Steak Pizza is cheesy, meaty, comfort food at it’s most addicting.  It starts by layering pizza dough with Alfredo Sauce followed by mozzarella cheese, juicy steak, bell peppers, mushrooms and more cheese then baked to golden bubbly perfection. This Philly Cheese Steak Pizza is fabulous game day food,  party food, company food or just a fun dinner any night of the week.  Prepare to fall in love with your new favorite way to eat Philly Cheese Steak!",
+        "trending": false,
+        "dailyDeal": false,
+        "favorite": false
     },
     {
         "id": "1fc14ab3-6033-406e-b94e-784fe7cf3c4a",
         "name": "Caprese",
-        "sPrice": 17.50,
-        "mPrice": 21.50,
-        "lPrice": 22.50,
+        "sPrice": 17.5,
+        "mPrice": 21.5,
+        "lPrice": 22.5,
         "ingredients": [
             {
                 "id": "04781c28-05ca-400b-b62d-6679fbf41954",
@@ -418,6 +450,9 @@
                 "count": 1
             }
         ],
-        "description": "Authentic pizza topped with fresh mozzarella, tomatoes, basil and a balsamic glaze. You can\’t go wrong with a classic Caprese Pizza!"
+        "description": "Authentic pizza topped with fresh mozzarella, tomatoes, basil and a balsamic glaze. You can’t go wrong with a classic Caprese Pizza!",
+        "trending": false,
+        "dailyDeal": false,
+        "favorite": false
     }
 ]
