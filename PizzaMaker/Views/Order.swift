@@ -13,7 +13,7 @@ struct Order: View {
             Text("Order")
         }
         .preferredColorScheme(.dark)
-        .background(Color("RichBlack"))
+        .background(Color("Champagne"))
     }
 }
 

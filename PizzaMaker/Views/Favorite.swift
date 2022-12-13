@@ -13,7 +13,7 @@ struct Favorite: View {
             Text("Favorite")
         }
         .preferredColorScheme(.dark)
-        .background(Color("RichBlack"))
+        .background(Color("Champagne"))
     }
 }
 

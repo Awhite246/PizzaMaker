@@ -15,8 +15,8 @@ struct Menu: View {
         List {
             ForEach(menu) { pizza in
                 Button {
-                    showingDetail = true
                     currentPizza = pizza
+                    showingDetail = true
                 } label: {
                     HStack {
                         Text("\(pizza.name)")
@@ -38,7 +38,7 @@ struct Menu: View {
         .fullScreenCover(isPresented: $showingDetail, content: {
             Detail(pizza: currentPizza)
         })
-        .background(Color("RichBlack"))
+        .background(Color("Champagne"))
         .scrollContentBackground(.hidden)
         .preferredColorScheme(.dark)
     }

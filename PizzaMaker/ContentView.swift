@@ -27,7 +27,7 @@ struct ContentView: View {
                     Label("Order", systemImage: "cart")
                 }
         }
-        .preferredColorScheme(.dark)
+        .preferredColorScheme(.light)
     }
 }
 
