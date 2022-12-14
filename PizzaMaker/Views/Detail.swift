@@ -50,6 +50,8 @@ struct Detail: View {
                             .bold()
                             .font(.system(size: 20))
                             .offset(x: 65)
+                        RadialGradient(gradient: Gradient(colors: [Color.black, Color.clear]), center: .center, startRadius: 0, endRadius: 25)
+                            .frame(width: 40, height: 40)
                         Image(systemName: "star.circle")
                             .resizable()
                             .foregroundColor(Color("Tangerine"))
@@ -67,6 +69,8 @@ struct Detail: View {
                             .bold()
                             .font(.system(size: 20))
                             .offset(x: 60)
+                        RadialGradient(gradient: Gradient(colors: [Color.black, Color.clear]), center: .center, startRadius: 0, endRadius: 25)
+                            .frame(width: 40, height: 40)
                         Image(systemName: "flame.circle")
                             .resizable()
                             .foregroundColor(Color("Vermilion"))
@@ -158,9 +162,10 @@ struct Detail: View {
                 }
                 .padding(.horizontal, 50)
             }
+            .offset(y: -10)
         }
         .sheet(isPresented: $moreDetails, content: {
-            ExtraDetail()
+            ExtraDetail(pizza: pizza)
         })
         .sheet(isPresented: $customizePizza, content: {
             
