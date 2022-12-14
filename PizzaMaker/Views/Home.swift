@@ -51,6 +51,10 @@ struct Home: View {
                 }
                 Divider()
                 Text("Recomended For You")
+                    .foregroundColor(Color("Imperial Red"))
+                    .bold()
+                    .font(.system(size: 20))
+                    .padding(.bottom, -10)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(menu) { pizza in

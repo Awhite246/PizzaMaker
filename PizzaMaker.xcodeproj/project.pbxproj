@@ -19,6 +19,7 @@
 		E376928A29411C150033F11B /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376928929411C150033F11B /* Favorite.swift */; };
 		E376928E29438B740033F11B /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376928D29438B740033F11B /* Detail.swift */; };
 		E37692902948EE7F0033F11B /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376928F2948EE7F0033F11B /* HomeItem.swift */; };
+		E3769292294A624E0033F11B /* ExtraDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3769291294A624E0033F11B /* ExtraDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		E376928929411C150033F11B /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		E376928D29438B740033F11B /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		E376928F2948EE7F0033F11B /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
+		E3769291294A624E0033F11B /* ExtraDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				E3769273293A563C0033F11B /* Home.swift */,
 				E376928D29438B740033F11B /* Detail.swift */,
+				E3769291294A624E0033F11B /* ExtraDetail.swift */,
 				E3769277293E4BF10033F11B /* Menu.swift */,
 				E3769279293E4C480033F11B /* Order.swift */,
 				E376928929411C150033F11B /* Favorite.swift */,
@@ -181,6 +184,7 @@
 				E37692902948EE7F0033F11B /* HomeItem.swift in Sources */,
 				E376928A29411C150033F11B /* Favorite.swift in Sources */,
 				E376928E29438B740033F11B /* Detail.swift in Sources */,
+				E3769292294A624E0033F11B /* ExtraDetail.swift in Sources */,
 				E3769276293E49140033F11B /* Pizza.swift in Sources */,
 				E3769264293A55C30033F11B /* ContentView.swift in Sources */,
 				E3769274293A563C0033F11B /* Home.swift in Sources */,
