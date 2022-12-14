@@ -11,6 +11,7 @@ struct HomeItem: View {
     let pizza: Pizza
     @State private var like = false
     @State private var size = 20.0
+    @State private var showingDetail = false
     var body: some View {
         VStack {
             ZStack {
@@ -22,8 +23,23 @@ struct HomeItem: View {
                             .frame(width: 200, height: 200)
                             .ignoresSafeArea()
                             .offset(y: -50)
+                        LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.9), Color.clear]), startPoint: .top, endPoint: .bottom)
+                            .offset(y: -130)
+                            .frame(width: 200, height: 40)
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 15))
+                HStack {
+                    if pizza.dailyDeal {
+                        Image(systemName: "star.circle.fill")
+                            .foregroundColor(Color("Tangerine"))
+                    }
+                    if pizza.trending {
+                        Image(systemName: "flame.circle.fill")
+                            .foregroundColor(Color("Vermilion"))
+                    }
+                }
+                .multilineTextAlignment(.leading)
+                .offset(x: -60, y: -125)
                 Button {
                     like.toggle()
                     withAnimation(){
@@ -62,6 +78,12 @@ struct HomeItem: View {
                 .offset(y: 125)
                 .font(.system(size: 15))
             }
+            .onLongPressGesture {
+                showingDetail = true
+            }
+        }
+        .fullScreenCover(isPresented: $showingDetail) {
+            Detail(pizza: pizza)
         }
     }
 }

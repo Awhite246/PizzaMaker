@@ -9,13 +9,22 @@ import SwiftUI
 
 struct Detail: View {
     let pizza: Pizza
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         VStack {
-            Image(pizza.name)
-                .resizable()
-                .frame(width:400, height: 400)
-                .ignoresSafeArea()
-                .padding(.bottom, -55)
+            ZStack {
+                Button {
+                    
+                } label: {
+                    
+                }
+                
+                Image(pizza.name)
+                    .resizable()
+                    .frame(width:400, height: 400)
+                    .ignoresSafeArea()
+                    .padding(.bottom, -55)
+            }
             Text(pizza.name)
                 .font(.title).bold()
                 .foregroundColor(Color("Eggshell"))

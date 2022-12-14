@@ -12,37 +12,59 @@ struct Home: View {
     @State var scrollOffset = CGFloat.zero
     var body: some View {
         VStack {
+            ZStack {
+                Image("Pizza Logo")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .frame(width: 400, height: 200)
+                LinearGradient(gradient: Gradient(colors: [Color.clear, Color.black]), startPoint: .top, endPoint: .bottom)
+                    .frame(height:100)
+                    .offset(y: 50)
+                HStack {
+                    Image(systemName: "star.circle")
+                        .foregroundColor(Color("Tangerine"))
+                    Text("Daily Deal ")
+                    .foregroundColor(Color("Honeydew"))
+                    Text("•")
+                        .font(.system(size: 50))
+                        .offset(y: -2)
+                        .foregroundColor(Color("Honeydew"))
+                    Image(systemName: "flame.circle")
+                        .foregroundColor(Color("Vermilion"))
+                    Text("Trending")
+                    .foregroundColor(Color("Honeydew"))
+                }
+                .offset(x: -65, y: 75)
+            }
             ScrollView(.vertical, showsIndicators: false) {
-                Text("Daily Deals")
-                    .foregroundColor(Color(.black))
-                    .offset(x: -75, y : 30)
-                    .font(.system(size: 50))
                 ScrollView(.horizontal, showsIndicators: false) {
                     ZStack {
                         HStack {
                             ForEach(menu) { pizza in
-                                HomeItem(pizza: pizza)
-                                    .padding(.leading, 30)
+                                if pizza.dailyDeal {
+                                    HomeItem(pizza: pizza)
+                                        .padding(10)
+                                }
                             }
                         }
                     }
                 }
-                .padding(.bottom, -50)
-                Text("Trending")
-                    .foregroundColor(Color(.black))
-                    .offset(x: -100, y: 30)
-                    .font(.system(size: 50))
+                Divider()
+                    .padding(.bottom, 20)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(menu) { pizza in
-                            HomeItem(pizza: pizza)
-                                .padding(.leading, 30)
+                            if pizza.trending {
+                                HomeItem(pizza: pizza)
+                                    .padding(10)
+                            }
                         }
                     }
                 }
                 Color.clear
                     .frame(height: 20)
             }
+            .offset(y: -30)
         }
         .preferredColorScheme(.light)
     }
