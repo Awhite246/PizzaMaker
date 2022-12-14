@@ -30,15 +30,24 @@ struct HomeItem: View {
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                 HStack {
                     if pizza.dailyDeal {
-                        Image(systemName: "star.circle.fill")
-                            .foregroundColor(Color("Tangerine"))
+                        ZStack {
+                            RadialGradient(gradient: Gradient(colors: [Color.black, Color.clear]), center: .center, startRadius: 5, endRadius: 11)
+                                .frame(width: 25, height: 25)
+                            Image(systemName: "star.circle.fill")
+                                .foregroundColor(Color("Tangerine"))
+                        }
+                        .offset(x: pizza.trending ? 0 : -17)
                     }
                     if pizza.trending {
-                        Image(systemName: "flame.circle.fill")
-                            .foregroundColor(Color("Vermilion"))
+                        ZStack {
+                            RadialGradient(gradient: Gradient(colors: [Color.black, Color.clear]), center: .center, startRadius: 5, endRadius: 11)
+                                .frame(width: 25, height: 25)
+                            Image(systemName: "flame.circle.fill")
+                                .foregroundColor(Color("Vermilion"))
+                        }
+                        .offset(x: pizza.dailyDeal ? 0 : -17)
                     }
                 }
-                .multilineTextAlignment(.leading)
                 .offset(x: -60, y: -125)
                 Button {
                     like.toggle()
@@ -56,16 +65,16 @@ struct HomeItem: View {
                         .frame(width: size, height: size)
                 }
                 .animation(.interpolatingSpring(stiffness: 100, damping: 7), value: size)
-                .offset(x: -75, y: 75)
+                .offset(x: -75, y: 70)
                 Text(like ? "You like this pizza!" : "Like this pizza!")
                     .foregroundColor(Color("Pastel Pink"))
                     .multilineTextAlignment(.leading)
-                    .offset(x: like ? 15 : 5, y: 75)
+                    .offset(x: like ? 15 : 5, y: 70)
                 Text(pizza.name)
                     .bold()
                     .font(.system(size: 20))
                     .foregroundColor(Color("Prussian Blue"))
-                    .offset(y: 100)
+                    .offset(y: 90)
                 HStack {
                     Text("\(String(format: "%.2f", (pizza.dailyDeal ? (pizza.sPrice * 0.8) : (pizza.sPrice))))")
                         .foregroundColor(Color("Prussian Blue"))
@@ -75,11 +84,15 @@ struct HomeItem: View {
                             .foregroundColor(Color(uiColor: .lightGray))
                     }
                 }
-                .offset(y: 125)
+                .offset(y: 110)
                 .font(.system(size: 15))
-            }
-            .onLongPressGesture {
-                showingDetail = true
+                Button {
+                    showingDetail = true
+                } label: {
+                    Text("View Details")
+                        .foregroundColor(Color("Celadon Blue"))
+                }
+                .offset(y: 130)
             }
         }
         .fullScreenCover(isPresented: $showingDetail) {

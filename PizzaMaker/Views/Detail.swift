@@ -10,37 +10,58 @@ import SwiftUI
 struct Detail: View {
     let pizza: Pizza
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var moreDetails = false
+    @State private var customizePizza = false
     var body: some View {
         VStack {
             ZStack {
-                Button {
-                    
-                } label: {
-                    
-                }
-                
                 Image(pizza.name)
                     .resizable()
                     .frame(width:400, height: 400)
                     .ignoresSafeArea()
                     .padding(.bottom, -55)
+                LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .top, endPoint: .bottom)
+                    .frame(width: 400, height: 100)
+                    .offset(y: 120)
+                ZStack {
+                    RadialGradient(gradient: Gradient(colors: [Color.black, Color.clear]), center: .center, startRadius: 7, endRadius: 25)
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "arrow.uturn.backward.circle")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(Color("Powder Blue"))
+                    }
+                }
+                .offset(x: -140, y: -180)
+                Text(pizza.name)
+                    .font(.title).bold()
+                    .foregroundColor(Color("Prussian Blue"))
+                    .offset(y: 145)
             }
-            Text(pizza.name)
-                .font(.title).bold()
-                .foregroundColor(Color("Eggshell"))
-            Text(pizza.description)
-                .font(.system(size: 20))
-                .padding(.horizontal, 5)
-                .padding(.bottom, 10)
-                .padding(.top, 1)
-                .foregroundColor(Color("Eggshell"))
-            ForEach (pizza.ingredients) { ingredient in
+            .offset(y: 1)
+            ZStack {
+                Color("Powder Blue")
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .frame(width: 350, height: 235)
+                ScrollView(.vertical, showsIndicators: true) {
+                    Text(pizza.description)
+                        .font(.system(size: 20))
+                        .padding(.horizontal, 5)
+                        .foregroundColor(Color("Celadon Blue"))
+                }
+                .frame(width: 345, height: 225)
+            }
+            Button {
+                    moreDetails = true
+            } label: {
                 HStack {
-                    Text("\(ingredient.name): \(ingredient.count)")
-                        .font(.caption)
-                        .padding(.horizontal, 10)
+                    Text("More Details")
+                    Image(systemName: "arrowtriangle.up.fill")
                     Spacer()
                 }
+                .padding(.horizontal, 10)
             }
             Spacer()
             HStack {
@@ -48,7 +69,7 @@ struct Detail: View {
                     
                 } label: {
                     ZStack {
-                        Color("ShadowBlue")
+                        Color("Pastel Pink")
                             .frame(width:100, height: 130)
                             .clipShape(RoundedRectangle(cornerRadius: 15))
                         VStack {
@@ -57,16 +78,16 @@ struct Detail: View {
                                 .frame(width: 40, height: 35)
                             Text("Add to Cart")
                         }
-                        .tint(Color("Eggshell"))
+                        .tint(Color("Honeydew"))
                     }
                     .offset(y: 45)
                 }
                 .padding(.horizontal, 50)
                 Button {
-                    
+                    customizePizza = true
                 } label: {
                     ZStack {
-                        Color("ShadowBlue")
+                        Color("Pastel Pink")
                             .frame(width:100, height: 130)
                             .clipShape(RoundedRectangle(cornerRadius: 15))
                         VStack {
@@ -75,15 +96,20 @@ struct Detail: View {
                                 .frame(width: 35, height: 35)
                             Text("Customize Pizza")
                         }
-                        .tint(Color("Eggshell"))
+                        .tint(Color("Honeydew"))
                     }
                     .offset(y: 45)
                 }
                 .padding(.horizontal, 50)
             }
         }
-        .preferredColorScheme(.dark)
-        .background(Color("Champagne"))
+        .sheet(isPresented: $moreDetails, content: {
+            
+        })
+        .sheet(isPresented: $customizePizza, content: {
+            
+        })
+        .preferredColorScheme(.light)
     }
 }
 
