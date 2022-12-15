@@ -10,6 +10,7 @@ import SwiftUI
 struct Home: View {
     let menu = Bundle.main.decode([Pizza].self, from: "menu.json")
     @EnvironmentObject var favoriteList : FavoriteList
+    @EnvironmentObject var orderList : OrderList
     var body: some View {
         VStack {
             ZStack {
@@ -75,6 +76,8 @@ struct Home: View {
 }
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(FavoriteList())
+        ContentView()
+            .environmentObject(FavoriteList())
+            .environmentObject(OrderList())
     }
 }

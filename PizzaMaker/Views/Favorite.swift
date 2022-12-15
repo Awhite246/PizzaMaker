@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Favorite: View {
     @EnvironmentObject var favoriteList : FavoriteList
+    @EnvironmentObject var orderList : OrderList
     var body: some View {
         VStack {
             ZStack {
@@ -56,6 +57,8 @@ struct Favorite: View {
 
 struct Favorite_Previews: PreviewProvider {
     static var previews: some View {
-        Favorite().environmentObject(FavoriteList())
+        Favorite()
+            .environmentObject(FavoriteList())
+            .environmentObject(OrderList())
     }
 }
