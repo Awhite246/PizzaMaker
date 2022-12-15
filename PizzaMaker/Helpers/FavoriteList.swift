@@ -21,4 +21,11 @@ class FavoriteList : ObservableObject {
             items.remove(at: index)
         }
     }
+    
+    func contains(item : Pizza) -> Bool {
+        if (items.firstIndex(of: item) == nil) {
+            return false
+        }
+        return true
+    }
 }

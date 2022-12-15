@@ -9,19 +9,29 @@ import SwiftUI
 
 struct Menu: View {
     let menu = Bundle.main.decode([Pizza].self, from: "menu.json")
+    @EnvironmentObject var favoriteList : FavoriteList
     @State var showingDetail = false
     @State var allItems = true
     var body: some View {
         VStack {
             ZStack {
                 VStack {
-                    Color("Imperial Red")
-                        .frame(height: 150)
-                        .padding(.bottom, -10)
-                    HStack {
-                        Color("Celadon Blue")
-                            .frame(height: 50)
+                    ZStack {
+                        Color("Imperial Red")
+                            .frame(height: 120)
+                            .padding(.bottom, -10)
+                        LinearGradient(gradient: Gradient(colors: [Color("Imperial Red"), Color("Prussian Blue")]), startPoint: .top, endPoint: .bottom)
+                            .frame(width: 400, height: 10)
+                            .offset(y: 60)
                     }
+                    ZStack {
+                        Color("Prussian Blue")
+                            .frame(height: 50)
+                        LinearGradient(gradient: Gradient(colors: [Color("Prussian Blue"), Color.white]), startPoint: .top, endPoint: .bottom)
+                            .frame(width: 400, height: 10)
+                            .offset(y: 25)
+                    }
+                    
                 }
                 Text("Menu")
                     .font(.title).bold()
@@ -53,7 +63,7 @@ struct Menu: View {
                     .padding(.leading, 50)
                     .offset(x: 10)
                 }
-                .offset(y: 75)
+                .offset(y: 60)
             }
             .ignoresSafeArea()
             ScrollView {
@@ -69,12 +79,12 @@ struct Menu: View {
                     }
                 }
             }
-            .padding(.top, -65)
+            .padding(.top, -60)
         }
     }
 }
 struct Menu_Previews: PreviewProvider {
     static var previews: some View {
-        Menu()
+        Menu().environmentObject(FavoriteList())
     }
 }

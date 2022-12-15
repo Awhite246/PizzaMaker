@@ -38,7 +38,7 @@ struct ExtraDetail: View {
                     HStack {
                         Text(ingredient.name)
                         Spacer()
-                        Text("\(ingredient.count)")
+                        //Text("\(ingredient.count)")
                     }
                     .foregroundColor(Color("Celadon Blue"))
                 }

@@ -56,8 +56,10 @@ struct MenuItem: View {
                     withAnimation(){
                         if like {
                             size += 3
+                            favoriteList.add(item: pizza)
                         } else {
                             size -= 3
+                            favoriteList.remove(item: pizza)
                         }
                     }
                 } label: {
@@ -97,9 +99,12 @@ struct MenuItem: View {
             Detail(pizza: pizza)
         }
         .onAppear {
-            if pizza.favorite {
+            if favoriteList.contains(item: pizza) {
                 like = true
                 size = 18.0
+            } else {
+                like = false
+                size = 15.0
             }
         }
     }

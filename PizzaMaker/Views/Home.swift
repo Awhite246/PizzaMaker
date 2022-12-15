@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Home: View {
     let menu = Bundle.main.decode([Pizza].self, from: "menu.json")
-    @State var scrollOffset = CGFloat.zero
+    @EnvironmentObject var favoriteList : FavoriteList
     var body: some View {
         VStack {
             ZStack {
@@ -75,6 +75,6 @@ struct Home: View {
 }
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(FavoriteList())
     }
 }
