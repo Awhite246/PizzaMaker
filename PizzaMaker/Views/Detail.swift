@@ -21,12 +21,15 @@ struct Detail: View {
                     .frame(width:400, height: 400)
                     .ignoresSafeArea()
                     .padding(.bottom, -55)
+                //cool transition from image to background
                 LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .top, endPoint: .bottom)
                     .frame(width: 400, height: 100)
                     .offset(y: 120)
                 ZStack {
+                    //makes button more redable on light backgrounds
                     RadialGradient(gradient: Gradient(colors: [Color.black, Color.clear]), center: .center, startRadius: 7, endRadius: 25)
                     Button {
+                        //back button
                         presentationMode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: "arrow.uturn.backward.circle")
@@ -42,6 +45,7 @@ struct Detail: View {
                     .offset(y: 145)
                 if pizza.dailyDeal {
                     Group {
+                        //makes text more readable
                         EllipticalGradient(colors:[Color.black, Color.clear], center: .center, startRadiusFraction: 0.0, endRadiusFraction: 0.3)
                             .frame(width: 350, height: 50)
                             .offset(x: 50)
@@ -50,6 +54,7 @@ struct Detail: View {
                             .bold()
                             .font(.system(size: 20))
                             .offset(x: 65)
+                        //makes icon more readable
                         RadialGradient(gradient: Gradient(colors: [Color.black, Color.clear]), center: .center, startRadius: 0, endRadius: 25)
                             .frame(width: 40, height: 40)
                         Image(systemName: "star.circle")
@@ -61,6 +66,7 @@ struct Detail: View {
                 }
                 if pizza.trending {
                     Group {
+                        //makes text more redable
                         EllipticalGradient(colors:[Color.black, Color.clear], center: .center, startRadiusFraction: 0.0, endRadiusFraction: 0.3)
                             .frame(width: 350, height: 50)
                             .offset(x: 50)
@@ -69,6 +75,7 @@ struct Detail: View {
                             .bold()
                             .font(.system(size: 20))
                             .offset(x: 60)
+                        //makes icon more redable
                         RadialGradient(gradient: Gradient(colors: [Color.black, Color.clear]), center: .center, startRadius: 0, endRadius: 25)
                             .frame(width: 40, height: 40)
                         Image(systemName: "flame.circle")
@@ -80,6 +87,7 @@ struct Detail: View {
                 }
             }
             .offset(y: 10)
+            //pizza description
             ZStack {
                 Color("Honeydew")
                     .clipShape(RoundedRectangle(cornerRadius: 15))
@@ -92,6 +100,7 @@ struct Detail: View {
                 .frame(width: 345, height: 145)
             }
             .offset(y: 0)
+            //extra detail button
             Button {
                 moreDetails = true
             } label: {
@@ -104,6 +113,7 @@ struct Detail: View {
                 .padding(.horizontal, 10)
             }
             .offset(y: 0)
+            //size picker
             Group{
                 Text("Pizza Size:")
                 Picker(selection: $size, label: Text("Picker")) {
@@ -114,9 +124,9 @@ struct Detail: View {
                 .frame(width: 350)
                 .pickerStyle(.segmented)
                 HStack {
-                    Text("Price: \(String(format:"%.2f", getPrice() * (pizza.dailyDeal ? 0.8 : 1)))")
+                    Text("Price: $\(String(format:"%.2f", getPrice() * (pizza.dailyDeal ? 0.8 : 1)))")
                     if pizza.dailyDeal {
-                        Text("\(String(format: "%.2f", getPrice()))")
+                        Text("$\(String(format: "%.2f", getPrice()))")
                             .strikethrough()
                             .foregroundColor(Color(uiColor: .lightGray))
                     }
@@ -124,6 +134,7 @@ struct Detail: View {
             }
             .offset(y: 20)
             //Spacer()
+            //customize and add to cart buttons
             HStack {
                 Button {
                     
@@ -164,7 +175,7 @@ struct Detail: View {
             }
             .offset(y: -10)
         }
-        .sheet(isPresented: $moreDetails, content: {
+        .fullScreenCover(isPresented: $moreDetails, content: {
             ExtraDetail(pizza: pizza)
         })
         .sheet(isPresented: $customizePizza, content: {

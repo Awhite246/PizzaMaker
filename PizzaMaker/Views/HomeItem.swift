@@ -76,10 +76,10 @@ struct HomeItem: View {
                     .foregroundColor(Color("Prussian Blue"))
                     .offset(y: 90)
                 HStack {
-                    Text("\(String(format: "%.2f", (pizza.dailyDeal ? (pizza.sPrice * 0.8) : (pizza.sPrice))))")
+                    Text("$\(String(format: "%.2f", (pizza.dailyDeal ? (pizza.sPrice * 0.8) : (pizza.sPrice))))")
                         .foregroundColor(Color("Prussian Blue"))
                     if pizza.dailyDeal {
-                        Text("\(String(format: "%.2f", pizza.sPrice))")
+                        Text("$\(String(format: "%.2f", pizza.sPrice))")
                             .strikethrough()
                             .foregroundColor(Color(uiColor: .lightGray))
                     }

@@ -13,6 +13,7 @@ struct ExtraDetail: View {
     var body: some View {
         VStack {
             List {
+                //pizza name
                 HStack {
                     Spacer()
                     Text(pizza.name)
@@ -22,6 +23,7 @@ struct ExtraDetail: View {
                 }
                 .listRowBackground(Color("Celadon Blue"))
                 .foregroundColor(Color("Honeydew"))
+                //ingredients title
                 HStack {
                     Spacer()
                     Text("Ingredients")
@@ -31,6 +33,7 @@ struct ExtraDetail: View {
                 }
                 .listRowBackground(Color("Imperial Red"))
                 .foregroundColor(Color("Honeydew"))
+                //list of ingredients
                 ForEach(pizza.ingredients) { ingredient in
                     HStack {
                         Text(ingredient.name)
@@ -41,6 +44,7 @@ struct ExtraDetail: View {
                 }
                 .listRowSeparator(.hidden)
                 .listRowBackground(Color("Honeydew"))
+                //prices title
                 HStack {
                     Spacer()
                     Text("Prices")
@@ -50,42 +54,50 @@ struct ExtraDetail: View {
                 }
                 .listRowBackground(Color("Imperial Red"))
                 .foregroundColor(Color("Honeydew"))
+                //large pizza price
                 HStack {
                     Text("Large Pizza:")
                     Spacer()
+                    //calcualtes and displays discount when there is discount
                     Text("$\(String(format: "%.2f", pizza.lPrice * (pizza.dailyDeal ? 0.8 : 1.0)))")
                     if pizza.dailyDeal {
                         Text("$\(String(format: "%.2f", pizza.lPrice))")
+                            .foregroundColor(Color("Powder Blue"))
                             .padding(.leading, 10)
                             .strikethrough()
                     }
                 }
                 .foregroundColor(Color("Celadon Blue"))
                 .listRowBackground(Color("Honeydew"))
+                //medium pizzz price
                 HStack {
                     Text("Medium Pizza:")
                     Spacer()
                     Text("$\(String(format: "%.2f", pizza.mPrice * (pizza.dailyDeal ? 0.8 : 1.0)))")
                     if pizza.dailyDeal {
                         Text("$\(String(format: "%.2f", pizza.mPrice))")
+                            .foregroundColor(Color("Powder Blue"))
                             .padding(.leading, 10)
                             .strikethrough()
                     }
                 }
                 .foregroundColor(Color("Celadon Blue"))
                 .listRowBackground(Color("Honeydew"))
+                //small pizza price
                 HStack {
                     Text("Small Pizza:")
                     Spacer()
                     Text("$\(String(format: "%.2f", pizza.sPrice * (pizza.dailyDeal ? 0.8 : 1.0)))")
                     if pizza.dailyDeal {
                         Text("$\(String(format: "%.2f", pizza.sPrice))")
+                            .foregroundColor(Color("Powder Blue"))
                             .padding(.leading, 10)
                             .strikethrough()
                     }
                 }
                 .foregroundColor(Color("Celadon Blue"))
                 .listRowBackground(Color("Honeydew"))
+                //descripitno title
                 HStack {
                     Spacer()
                     Text("Description")
@@ -95,10 +107,11 @@ struct ExtraDetail: View {
                 }
                 .listRowBackground(Color("Imperial Red"))
                 .foregroundColor(Color("Honeydew"))
+                //dscription
                 Text(pizza.description)
                     .foregroundColor(Color("Celadon Blue"))
                     .listRowBackground(Color("Honeydew"))
-                    .frame(height:112)
+                //back button
                 Button {
                     presentationMode.wrappedValue.dismiss()
                 } label: {
