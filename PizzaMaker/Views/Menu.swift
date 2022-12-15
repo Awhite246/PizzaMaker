@@ -62,7 +62,7 @@ struct Menu: View {
                         if allItems {
                             MenuItem(pizza: pizza)
                         } else {
-                            if pizza.dailyDeal || pizza.trending || pizza.favorite {
+                            if pizza.dailyDeal || pizza.trending {
                                 MenuItem(pizza: pizza)
                             }
                         }

@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct PizzaMakerApp: App {
+    @StateObject var favoriteList = FavoriteList()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(favoriteList)
         }
     }
 }
