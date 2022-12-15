@@ -10,6 +10,7 @@ import SwiftUI
 struct Pay: View {
     @EnvironmentObject var orderList: OrderList
     let tipAmounts = [10, 15, 20, 25, 0]
+    //fake card number
     @State private var cardNumber = ""
     @State private var tipAmount = 10
     @State private var showingPaymentAlert = false
@@ -17,10 +18,12 @@ struct Pay: View {
     let pickupTimes = ["Now", "Tonight", "Tommorow"]
     @State private var pickupTime = "Now"
     @State private var name = ""
+    //allows for custom back button
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         VStack {
             ZStack {
+                //fancy colors for user expereince
                 Color("Prussian Blue")
                     .frame(width: 400, height: 150)
                     .ignoresSafeArea()
@@ -42,6 +45,7 @@ struct Pay: View {
                 Text("Name:")
                 TextField("Name", text: $name)
                 Text("Card Number:")
+                //interesting version of textfield, could explore further with limiting what character can be entered
                 SecureField("Credit Card", text: $cardNumber)
             }
             .frame(width: 350)
@@ -58,6 +62,7 @@ struct Pay: View {
             }
             .frame(width:350)
             Divider()
+            //Tip
             Group {
                 Text("Add a tip?")
                 Picker("Percentage:", selection: $tipAmount) {
@@ -69,6 +74,8 @@ struct Pay: View {
             }
             .frame(width: 350)
             Divider()
+            //Shows all items ordered and prices
+            //also shows tip and tax amount
             Group {
                 Text("Order Details")
                 ZStack {
@@ -77,6 +84,7 @@ struct Pay: View {
                     ScrollView {
                         ForEach(orderList.items) { pizza in
                             HStack {
+                                //shows pizza name, amount of pizzas ordered, and price
                                 Text("\(pizza.count) \(size(pizza.size)) \(pizza.name)")
                                     .padding(.leading, 10)
                                 Spacer()
@@ -87,6 +95,7 @@ struct Pay: View {
                         .padding(.top, 5)
                         Divider()
                             .padding(.bottom, 10)
+                        //total prices of all pizzas adddd up
                         HStack {
                             Text("Total:")
                                 .padding(.leading, 10)
@@ -94,6 +103,7 @@ struct Pay: View {
                             Text("$\(String(format: "%.2f", orderList.total()))")
                                 .padding(.trailing, 10)
                         }
+                        //taxes amount on total
                         HStack {
                             Text("Taxes:")
                                 .padding(.leading, 10)
@@ -101,6 +111,7 @@ struct Pay: View {
                             Text("$\(String(format: "%.2f", orderList.total() * 0.065))")
                                 .padding(.trailing, 10)
                         }
+                        //tip amount on total
                         HStack {
                             Text("Tip:")
                                 .padding(.leading, 10)
@@ -136,6 +147,7 @@ struct Pay: View {
         }
         .navigationTitle("Payment")
         .navigationBarTitleDisplayMode(.inline)
+        //confirm button
         .alert(isPresented: $showingPaymentAlert) {
             Alert(title: Text("Order confirmed for \(name)"), message: Text("Your total was \(totalPrice) – Thank You!"), dismissButton: .default(Text("OK")))
         }
@@ -153,6 +165,7 @@ struct Pay: View {
         
         return formatter.string(from: NSNumber(value: (total + tipValue + tax))) ?? "$0"
     }
+    //converts size to readable string
     func size (_ pizzaSize : String) -> String {
         switch (pizzaSize) {
         case "S": return "Small"
@@ -161,6 +174,7 @@ struct Pay: View {
         default: return ""
         }
     }
+    //calculates total price of indivudual pizzas
     func calcPrice (item : Pizza) -> Double {
         var out = 0.0
         switch item.size {

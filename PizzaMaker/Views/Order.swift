@@ -13,6 +13,7 @@ struct Order: View {
     var body: some View {
         VStack {
             ZStack {
+                //backkround colors for titles
                 Color("Imperial Red")
                     .ignoresSafeArea()
                     .frame(width: 400, height: orderList.items.isEmpty ? 80 : 110)
@@ -20,6 +21,7 @@ struct Order: View {
                     .font(.title).bold()
                     .foregroundColor(Color("Honeydew"))
                     .padding(.top, orderList.items.isEmpty ? -10 : -65)
+                //if no orders hide order button to not confuse user
                 if !orderList.items.isEmpty {
                     Button {
                         showPay = true;
@@ -45,6 +47,7 @@ struct Order: View {
                     .frame(width: 400, height: 20)
                     .offset(y: orderList.items.isEmpty ? 30 : 65)
             }
+            //if order is empty make background red header shorter for better look
             ZStack {
                 if orderList.items.isEmpty {
                     VStack {
@@ -63,6 +66,7 @@ struct Order: View {
                     .fontWeight(.semibold)
                     .foregroundColor(Color(uiColor: .lightGray))
                 }
+                //scroll view to display all ordered items
                 ScrollView {
                     
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
@@ -74,6 +78,7 @@ struct Order: View {
                 .padding(.top, 0)
             }
         }
+        //show payment view when payment button oressed
         .fullScreenCover(isPresented: $showPay) {
             Pay()
         }

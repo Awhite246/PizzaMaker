@@ -10,15 +10,15 @@ import SwiftUI
 struct Pizza : Codable, Identifiable, Equatable {
     var id : UUID
     var name : String
-    var sPrice : Double
-    var mPrice : Double
-    var lPrice : Double
+    var sPrice : Double //pizza small price
+    var mPrice : Double //pizza medium price
+    var lPrice : Double //pizza large price
     var ingredients : [Ingredient]
     var description : String
     var trending : Bool
     var dailyDeal : Bool
-    var count : Int
-    var size : String
+    var count : Int //amount of pizzas ordered
+    var size : String //size of the pizza
 }
 
 struct Ingredient : Codable, Identifiable, Equatable {

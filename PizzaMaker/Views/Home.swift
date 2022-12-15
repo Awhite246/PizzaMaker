@@ -21,6 +21,7 @@ struct Home: View {
                 LinearGradient(gradient: Gradient(colors: [Color.clear, Color.black]), startPoint: .top, endPoint: .bottom)
                     .frame(height:100)
                     .offset(y: 50)
+                //Images for trending and daily deals on top of pizza logo
                 HStack {
                     Image(systemName: "star.circle")
                         .foregroundColor(Color("Tangerine"))
@@ -37,12 +38,14 @@ struct Home: View {
                 }
                 .offset(x: -65, y: 75)
             }
+            //Double scroll view so u can go up and down, and left and right
             ScrollView(.vertical, showsIndicators: false) {
                 ScrollView(.horizontal, showsIndicators: false) {
                     ZStack {
                         HStack {
                             ForEach(menu) { pizza in
                                 if pizza.dailyDeal {
+                                    //seperate views for pizza so graphic design is easier
                                     HomeItem(pizza: pizza)
                                         .padding(10)
                                 }
@@ -66,6 +69,7 @@ struct Home: View {
                         }
                     }
                 }
+                //allows scolling farther down so easier pressing for user
                 Color.clear
                     .frame(height: 20)
             }

@@ -109,9 +109,9 @@
     {
         "id": "5eb47ce3-4841-45be-a41d-a2bfe7527276",
         "name": "Hawaiian",
-        "sPrice": 50,
-        "mPrice": 50,
-        "lPrice": 50,
+        "sPrice": 100,
+        "mPrice": 200,
+        "lPrice": 300,
         "ingredients": [
             {
                 "id": "99f393e4-5ea9-4b82-9417-ffebb9483407",

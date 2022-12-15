@@ -11,7 +11,6 @@ struct Detail: View {
     let pizza: Pizza
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var moreDetails = false
-    @State private var customizePizza = false
     @State private var size = "S"
     @State private var count = 1
     @EnvironmentObject var orderList : OrderList
@@ -28,13 +27,12 @@ struct Detail: View {
                     .frame(width: 400, height: 100)
                     .offset(y: 126)
                 
-                //makes button more redable on light backgrounds
-                
                 Button {
                     //back button
                     presentationMode.wrappedValue.dismiss()
                 } label: {
                     ZStack {
+                        //radial gradient makes buttons more readable on light backgrounds
                         RadialGradient(gradient: Gradient(colors: [Color.black, Color.clear]), center: .center, startRadius: 7, endRadius: 25)
                         Image(systemName: "arrow.uturn.backward.circle")
                             .resizable()
@@ -47,8 +45,9 @@ struct Detail: View {
                     .font(.title).bold()
                     .foregroundColor(Color("Prussian Blue"))
                     .offset(y: 160)
+                //does show if no daily deal
                 if pizza.dailyDeal {
-                    Group {
+                    Group { //daily deal logo
                         //makes text more readable
                         EllipticalGradient(colors:[Color.black, Color.clear], center: .center, startRadiusFraction: 0.0, endRadiusFraction: 0.3)
                             .frame(width: 350, height: 50)
@@ -68,8 +67,9 @@ struct Detail: View {
                     }
                     .offset(x: -175, y: -115)
                 }
+                //does show if not trending
                 if pizza.trending {
-                    Group {
+                    Group { //trending logo
                         //makes text more redable
                         EllipticalGradient(colors:[Color.black, Color.clear], center: .center, startRadiusFraction: 0.0, endRadiusFraction: 0.3)
                             .frame(width: 350, height: 50)
@@ -93,6 +93,7 @@ struct Detail: View {
             .offset(y: 10)
             //pizza description
             ZStack {
+                //color surrounding scoll view so it looks nicer
                 Color("Honeydew")
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     .frame(width: 350, height: 155)
@@ -117,7 +118,7 @@ struct Detail: View {
                 .padding(.horizontal, 10)
             }
             .offset(y: 3)
-            //size picker
+            //pizza size picker
             Group{
                 Text("Pizza Size:")
                     .padding(.bottom, -5)
@@ -138,6 +139,7 @@ struct Detail: View {
                     }
                 }
             }
+            //pizza amount picker (ease for user wanting multiple pizzas)
             Group {
                 Text("Pizza Amount: \(Int(count))")
                     .padding(.top, 10)
@@ -166,14 +168,13 @@ struct Detail: View {
             }
             .padding(.top, 5)
         }
+        //presents extra details when more details button is toggled
         .fullScreenCover(isPresented: $moreDetails, content: {
             ExtraDetail(pizza: pizza)
         })
-        .sheet(isPresented: $customizePizza, content: {
-            
-        })
         .preferredColorScheme(.light)
     }
+    //gets price for the size of pizza
     private func getPrice() -> Double {
         switch (size) {
         case "S": return pizza.sPrice

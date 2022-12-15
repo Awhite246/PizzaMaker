@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExtraDetail: View {
     let pizza : Pizza
+    //allows for custom back button
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         VStack {

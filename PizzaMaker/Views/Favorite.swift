@@ -11,6 +11,7 @@ struct Favorite: View {
     @EnvironmentObject var favoriteList : FavoriteList
     @EnvironmentObject var orderList : OrderList
     var body: some View {
+        //similar to order, except only shows items in favorite list instead of order list
         VStack {
             ZStack {
                 Color("Imperial Red")

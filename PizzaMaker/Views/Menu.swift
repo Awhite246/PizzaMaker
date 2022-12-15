@@ -17,6 +17,7 @@ struct Menu: View {
         VStack {
             ZStack {
                 VStack {
+                    //background colors for title and buttons
                     ZStack {
                         Color("Imperial Red")
                             .frame(height: 120)
@@ -37,6 +38,7 @@ struct Menu: View {
                 Text("Menu")
                     .font(.title).bold()
                     .foregroundColor(Color("Honeydew"))
+                //buttons to switch between all items and items with modifiers (daily deals and trending)
                 HStack {
                     Button {
                         withAnimation {
@@ -70,9 +72,10 @@ struct Menu: View {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
                     ForEach(menu) { pizza in
+                        //shows items based on what state allitems is in
                         if allItems {
                             MenuItem(pizza: pizza)
-                        } else {
+                        } else { //only shows trending and dailydeal items
                             if pizza.dailyDeal || pizza.trending {
                                 MenuItem(pizza: pizza)
                             }
