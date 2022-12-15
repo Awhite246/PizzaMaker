@@ -58,12 +58,12 @@ struct OrderItem: View {
                         .foregroundColor(Color("Imperial Red"))
                         .frame(width: 20, height: 25)
                 }
-                .offset(x: 75, y: 50)
+                .offset(x: 70, y: 75)
                 Text(pizza.name)
                     .bold()
                     .font(.system(size: 20))
                     .foregroundColor(Color("Prussian Blue"))
-                    .offset(y: 65)
+                    .offset(y: 50)
                 HStack {
                     Text("$\(String(format: "%.2f", (pizza.dailyDeal ? (pizza.sPrice * 0.8) : (pizza.sPrice))))")
                         .foregroundColor(Color("Prussian Blue"))
@@ -73,15 +73,21 @@ struct OrderItem: View {
                             .foregroundColor(Color(uiColor: .lightGray))
                     }
                 }
-                .offset(y: 90)
+                .offset(y: 72)
                 .font(.system(size: 15))
+                Text("Amount : \(pizza.count)")
+                    .offset(y : 90)
+                Text("Size : \(pizza.size)")
+                    .offset(y : 107)
                 Button {
                     showingDetail = true
                 } label: {
-                    Text("View Details")
-                        .foregroundColor(Color("Celadon Blue"))
+                    VStack {
+                        Text("View Details")
+                            .foregroundColor(Color("Celadon Blue"))
+                    }
                 }
-                .offset(y: 115)
+                .offset(y: 126)
             }
         }
         .fullScreenCover(isPresented: $showingDetail) {
@@ -92,7 +98,7 @@ struct OrderItem: View {
 
 struct OrderItem_Previews: PreviewProvider {
     static var previews: some View {
-        OrderItem(pizza: Pizza(id: UUID(uuidString: "5d5198e0-5389-4e62-bb1f-55680b977af5")!, name: "Cheese", sPrice: 1.00, mPrice: 2.00, lPrice: 3.00, ingredients: [Ingredient(id: UUID(uuidString: "1142be9c-fffb-4b78-87cf-5259cc85036c")!, name: "Test", count: 1)], description: "This cheese pizza is the perfect classic. It's made with a hand-stretched thin crust, topped with a delicious tomato sauce, and covered with a blanket of melty mozzarella cheese. To finish it off, it's baked in our hot brick oven, giving it a crispy, golden-brown crust. Get ready to enjoy the perfect combination of tangy tomato sauce, gooey cheese, and a light, flaky crust.", trending: true, dailyDeal: false, favorite: true))
+        OrderItem(pizza: Pizza(id: UUID(uuidString: "5d5198e0-5389-4e62-bb1f-55680b977af5")!, name: "Cheese", sPrice: 1.00, mPrice: 2.00, lPrice: 3.00, ingredients: [Ingredient(id: UUID(uuidString: "1142be9c-fffb-4b78-87cf-5259cc85036c")!, name: "Test", count: 1)], description: "This cheese pizza is the perfect classic. It's made with a hand-stretched thin crust, topped with a delicious tomato sauce, and covered with a blanket of melty mozzarella cheese. To finish it off, it's baked in our hot brick oven, giving it a crispy, golden-brown crust. Get ready to enjoy the perfect combination of tangy tomato sauce, gooey cheese, and a light, flaky crust.", trending: true, dailyDeal: true, count: 1, size: "S"))
             .environmentObject(FavoriteList())
             .environmentObject(OrderList())
     }

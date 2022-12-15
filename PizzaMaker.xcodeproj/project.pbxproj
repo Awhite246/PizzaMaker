@@ -24,6 +24,7 @@
 		E376929C294B6CED0033F11B /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376929B294B6CED0033F11B /* OrderList.swift */; };
 		E376929E294B6CFD0033F11B /* FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376929D294B6CFD0033F11B /* FavoriteList.swift */; };
 		E37692A2294B8CC50033F11B /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37692A1294B8CC50033F11B /* OrderItem.swift */; };
+		E37692A4294B987D0033F11B /* Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37692A3294B987D0033F11B /* Pay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		E376929B294B6CED0033F11B /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
 		E376929D294B6CFD0033F11B /* FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteList.swift; sourceTree = "<group>"; };
 		E37692A1294B8CC50033F11B /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
+		E37692A3294B987D0033F11B /* Pay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				E3769291294A624E0033F11B /* ExtraDetail.swift */,
 				E3769277293E4BF10033F11B /* Menu.swift */,
 				E3769279293E4C480033F11B /* Order.swift */,
+				E37692A3294B987D0033F11B /* Pay.swift */,
 				E376928929411C150033F11B /* Favorite.swift */,
 				E37692A1294B8CC50033F11B /* OrderItem.swift */,
 				E3769295294AA6B50033F11B /* MenuItem.swift */,
@@ -206,6 +209,7 @@
 				E37692882940F19F0033F11B /* JsonReader.swift in Sources */,
 				E3769296294AA6B50033F11B /* MenuItem.swift in Sources */,
 				E3769262293A55C30033F11B /* PizzaMakerApp.swift in Sources */,
+				E37692A4294B987D0033F11B /* Pay.swift in Sources */,
 				E3769278293E4BF10033F11B /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

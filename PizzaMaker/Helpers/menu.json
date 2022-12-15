@@ -25,7 +25,8 @@
         "description": "This cheese pizza is the perfect classic. It's made with a hand-stretched thin crust, topped with a delicious tomato sauce, and covered with a blanket of melty mozzarella cheese. To finish it off, it's baked in our hot brick oven, giving it a crispy, golden-brown crust. Get ready to enjoy the perfect combination of tangy tomato sauce, gooey cheese, and a light, flaky crust.",
         "trending": true,
         "dailyDeal": false,
-        "favorite": true
+        "count" : 0,
+        "size" : "S"
     },
     {
         "id": "b7a20a98-3490-4fd9-bc10-35b963efe891",
@@ -58,7 +59,8 @@
         "description": "This delicious pepperoni pizza is the perfect way to satisfy your craving for that classic Italian flavor. It starts with a freshly made, thin-crust dough and is topped with a savory tomato sauce. We then add a generous helping of our signature pepperoni for a salty, spicy flavor, and top it off with lots of melted mozzarella cheese. Enjoy a slice of this classic pizza for a delicious meal anytime!",
         "trending": false,
         "dailyDeal": true,
-        "favorite": true
+        "count" : 0,
+        "size" : "S"
     },
     {
         "id": "3049d229-f273-4d87-803e-ee04f426a2ef",
@@ -101,7 +103,8 @@
         "description": "This delicious sausage pizza is the perfect way to satisfy your cravings! Our classic pizza dough is topped with a generous helping of Italian sausage, sautéed onions, and fennel. We then add a generous helping of mozzarella cheese, and sprinkle it with fresh basil for an extra burst of flavor. Enjoy a slice of this delicious pizza today!",
         "trending": false,
         "dailyDeal": false,
-        "favorite": true
+        "count" : 0,
+        "size" : "S"
     },
     {
         "id": "5eb47ce3-4841-45be-a41d-a2bfe7527276",
@@ -129,7 +132,8 @@
         "description": "Hawaiian pizza is a disgusting abomination of culinary malice, a fusion of two completely separate and distinct cuisines that should never have been combined. The combination of sweet, tropical pineapple and savory, salty ham on top of a greasy slice of pizza is nothing short of trash. A revolting combination of flavors that is both unpalatable and nauseating, the combination of pineapple and ham is heinous and should be avoided at all costs. I strongly urge you to not purchase this vile \"food\"",
         "trending": false,
         "dailyDeal": false,
-        "favorite": false
+        "count" : 0,
+        "size" : "S"
     },
     {
         "id": "65dc18c0-64d4-4035-891a-a83c30594601",
@@ -177,7 +181,8 @@
         "description": "If you love pizza in all it's bready and cheesy glory, but still find yourself hungry for something more substantial, then chances are you'll be a fan of meat lover's pizza. Homemade thin crust pizza, topped off with creamy cheese, bacon, ham, pepperoni and hot sausage! A must make for meat lover’s.",
         "trending": true,
         "dailyDeal": true,
-        "favorite": false
+        "count" : 0,
+        "size" : "S"
     },
     {
         "id": "bf5f15b1-8133-4f64-9247-526c7038f398",
@@ -215,7 +220,8 @@
         "description": "Also known as white pizza, the pizza base is spread with a ricotta parmesan cheese mixture (instead of traditional tomato sauce), topped with salty pancetta cubes, creamy grated mozzarella, and finished with wild rocket arugula!",
         "trending": false,
         "dailyDeal": false,
-        "favorite": false
+        "count" : 0,
+        "size" : "S"
     },
     {
         "id": "05d02184-1796-4917-84fd-151d3140aeab",
@@ -258,7 +264,8 @@
         "description": "Everyone will be reaching for another slice after they've had a taste of this impressive pizza made with a handcrafted white sauce. The stellar cast includes butter, garlic and shredded parmesan cheese that's joined with strips of tender chicken, artichokes, green onions and tomato.",
         "trending": false,
         "dailyDeal": false,
-        "favorite": false
+        "count" : 0,
+        "size" : "S"
     },
     {
         "id": "753adf6d-1e2c-4263-bc0e-0f8cc135fcc7",
@@ -306,7 +313,8 @@
         "description": "This vegetarian pizza recipe will delight vegetarians and carnivores alike. It’s fresh and full of flavor, featuring cherry tomatoes, artichoke, bell pepper, olives, red onion and some hidden baby spinach. You’ll find a base of rich tomato sauce and golden, bubbling mozzarella underneath, of course.",
         "trending": false,
         "dailyDeal": true,
-        "favorite": false
+        "count" : 0,
+        "size" : "S"
     },
     {
         "id": "3f77e8de-5db7-45a5-a5dd-5f94ad617ec8",
@@ -339,7 +347,8 @@
         "description": "We love this vodka sauce pizza! Flavorful crust topped with perfect vodka sauce and fresh mozzarella. Sprinkle with basil and parmesan. It’s absolutely incredible.",
         "trending": false,
         "dailyDeal": false,
-        "favorite": false
+        "count" : 0,
+        "size" : "S"
     },
     {
         "id": "17df9398-e40e-4e6c-a744-86b44eef153d",
@@ -377,7 +386,8 @@
         "description": "This is a recipe for classic BBQ chicken pizza with tangy BBQ sauce, chicken, and red onion. Gouda cheese gives the homemade pizza the most delicious smoky flavor and cilantro adds a touch of freshness",
         "trending": false,
         "dailyDeal": false,
-        "favorite": false
+        "count" : 0,
+        "size" : "S"
     },
     {
         "id": "9438acef-938b-48e8-95ad-94227d257f0a",
@@ -415,7 +425,8 @@
         "description": "This Philly Cheese Steak Pizza is cheesy, meaty, comfort food at it’s most addicting.  It starts by layering pizza dough with Alfredo Sauce followed by mozzarella cheese, juicy steak, bell peppers, mushrooms and more cheese then baked to golden bubbly perfection. This Philly Cheese Steak Pizza is fabulous game day food,  party food, company food or just a fun dinner any night of the week.  Prepare to fall in love with your new favorite way to eat Philly Cheese Steak!",
         "trending": false,
         "dailyDeal": false,
-        "favorite": false
+        "count" : 0,
+        "size" : "S"
     },
     {
         "id": "1fc14ab3-6033-406e-b94e-784fe7cf3c4a",
@@ -453,6 +464,7 @@
         "description": "Authentic pizza topped with fresh mozzarella, tomatoes, basil and a balsamic glaze. You can’t go wrong with a classic Caprese Pizza!",
         "trending": false,
         "dailyDeal": false,
-        "favorite": false
+        "count" : 0,
+        "size" : "S"
     }
 ]

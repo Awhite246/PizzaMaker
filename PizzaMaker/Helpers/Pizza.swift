@@ -17,7 +17,8 @@ struct Pizza : Codable, Identifiable, Equatable {
     var description : String
     var trending : Bool
     var dailyDeal : Bool
-    var favorite : Bool
+    var count : Int
+    var size : String
 }
 
 struct Ingredient : Codable, Identifiable, Equatable {
