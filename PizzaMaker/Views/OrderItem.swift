@@ -65,10 +65,10 @@ struct OrderItem: View {
                     .foregroundColor(Color("Prussian Blue"))
                     .offset(y: 50)
                 HStack {
-                    Text("$\(String(format: "%.2f", (pizza.dailyDeal ? (pizza.sPrice * 0.8) : (pizza.sPrice))))")
+                    Text("$\(String(format: "%.2f", (pizza.dailyDeal ? (price() * 0.8) : (price()))))")
                         .foregroundColor(Color("Prussian Blue"))
                     if pizza.dailyDeal {
-                        Text("$\(String(format: "%.2f", pizza.sPrice))")
+                        Text("$\(String(format: "%.2f", price()))")
                             .strikethrough()
                             .foregroundColor(Color(uiColor: .lightGray))
                     }
@@ -92,6 +92,14 @@ struct OrderItem: View {
         }
         .fullScreenCover(isPresented: $showingDetail) {
             ExtraDetail(pizza: pizza)
+        }
+    }
+    func price() -> Double {
+        switch pizza.size {
+        case "S": return pizza.sPrice
+        case "M": return pizza.mPrice
+        case "L": return pizza.lPrice
+        default: return 0.0
         }
     }
 }
