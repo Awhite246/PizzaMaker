@@ -25,6 +25,9 @@ struct HomeItem: View {
                             .frame(width: 200, height: 200)
                             .ignoresSafeArea()
                             .offset(y: -50)
+                            .onTapGesture {
+                                showingDetail = true
+                            }
                         LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.9), Color.clear]), startPoint: .top, endPoint: .bottom)
                             .offset(y: -130)
                             .frame(width: 200, height: 40)

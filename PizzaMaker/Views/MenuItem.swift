@@ -25,6 +25,9 @@ struct MenuItem: View {
                             .frame(width: 180, height: 180)
                             .ignoresSafeArea()
                             .offset(y: -55)
+                            .onTapGesture {
+                                showingDetail = true
+                            }
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                 HStack {
